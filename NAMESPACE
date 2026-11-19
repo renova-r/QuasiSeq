@@ -1,0 +1,28 @@
+export(NBDev, PoisDev, QL.fit, QL.results)
+export(fbrNBglm.fit, fbrNBglm.control, negbin, coef.glm)
+export(glmsolve, nlsolve, glmSolvers, nlSolvers)
+
+import(edgeR)
+importFrom(utils, txtProgressBar, setTxtProgressBar)
+
+importFrom(mgcv, negbin, fix.family.link, fix.family.var)
+importFrom(pracma, broyden)
+
+## these are for comparison only
+importFrom(pracma, brentDekker, newtonRaphson, ridders, secant)
+importFrom(stats, uniroot)
+
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "layout", "legend", "lines", "par", "plot")
+importFrom("stats", "coef", "gaussian", "glm", "glm.control", "lm.fit",
+     "median", "model.matrix", "optimize", "pf", "predict", "qf",
+     "quantile", "smooth.spline", "var", "ave", "poisson")
+
+
+  
+#import(MASS)
+#importFrom(nleqslv, nleqslv)
+
+S3method(coef, glm)
+
+useDynLib(QuasiSeq, .registration =TRUE, .fixes="C_")
