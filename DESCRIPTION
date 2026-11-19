@@ -1,6 +1,5 @@
 Package: QuasiSeq
-Version: 1.0-11-0
-Date: 2022-08-11
+Version: 1.0.11.0.9001
 Title: Analyzing RNA Sequencing Count Tables Using Quasi-Likelihood
 Authors@R: c(
   person("Steve", "Lund", role=c("aut", "cre"), email="lundsp@gmail.com"),
@@ -14,6 +13,7 @@ Imports: edgeR, mgcv, pracma, utils, grDevices, graphics
 Suggests: BB, nleqslv
 Enhances: stats
 Description: Identify differentially expressed genes in RNA-seq count data using quasi-Poisson or quasi-negative binomial models with 'QL', 'QLShrink' and 'QLSpline' methods described by Lund, Nettleton, McCarthy, and Smyth (2012) <DOI:10.1515/1544-6115.1826>. Report bias-reduced estimates of log fold changes.
+    Compatibility updates by Renova.
 License: GPL (>= 2)
 NeedsCompilation: yes
 LazyData: yes

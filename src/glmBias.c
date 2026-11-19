@@ -66,28 +66,28 @@ void initQRdecomp(int* n, int* p)
 	lwork = LWORK;
 	rank=*p; np=(*n) * (*p); 
 
-	if(p) Free(jpvt);
-	jpvt=Calloc(*p, int); 
+	if(p) R_Free(jpvt);
+	jpvt=R_Calloc(*p, int); 
 	
-	if(tau) Free(tau);
-	tau=Calloc(*p, double); 
+	if(tau) R_Free(tau);
+	tau=R_Calloc(*p, double); 
 	
-	if(work) Free(work);
-	work=Calloc(lwork, double);
+	if(work) R_Free(work);
+	work=R_Calloc(lwork, double);
 	
-	if(hatwq) Free(hatwq);
-	hatwq=Calloc(*n, double);
+	if(hatwq) R_Free(hatwq);
+	hatwq=R_Calloc(*n, double);
 	
-	if(Q) Free(Q);
-	Q=Calloc(np, double);
+	if(Q) R_Free(Q);
+	Q=R_Calloc(np, double);
 }
 void finalQRdecomp()
 {
-	Free(jpvt); jpvt=NULL;
-	Free(tau);  tau=NULL;
-	Free(work); work=NULL;
-	Free(hatwq); hatwq=NULL;
-	Free(Q); Q=NULL;
+	R_Free(jpvt); jpvt=NULL;
+	R_Free(tau);  tau=NULL;
+	R_Free(work); work=NULL;
+	R_Free(hatwq); hatwq=NULL;
+	R_Free(Q); Q=NULL;
 }
 
 SEXP getGlmBias(SEXP rtwx, SEXP wrt, SEXP ngood, SEXP rk)

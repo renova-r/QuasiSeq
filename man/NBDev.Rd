@@ -39,7 +39,7 @@ Firth (1993) "Bias reduction of maximum likelihood estimates" \emph{Biometrika},
 
 Kosmidis and Firth (2009) "Bias reduction in exponential family nonlinear models" \emph{Biometrika}, \bold{96}, 793--804.
 
-Lund, Nettleton, McCarthy and Smyth (2012) "Detecting differential expression in RNA-sequence data using quasi-likelihood with shrunken dispersion estimates" emph{SAGMB}, \bold{11}(5).
+Lund, Nettleton, McCarthy and Smyth (2012) "Detecting differential expression in RNA-sequence data using quasi-likelihood with shrunken dispersion estimates" \emph{SAGMB}, \bold{11}(5).
 
 McCullagh and Nelder (1989) "Generalized Linear Models", 2nd edition. London: Chapman and Hall. 
 }

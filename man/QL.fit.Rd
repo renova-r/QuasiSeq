@@ -24,11 +24,11 @@ QL.fit(counts, design.list, test.mat=cbind(1L, 2:length(design.list)),
     
 	\item{print.progress}{logical. If \code{TRUE}, a text progress bar will be displayed during the fitting of \emph{each} models in the \code{design.list}. }
 	
-    \item{NBdisp}{Used only when \code{Model="NegBin"}. Must be one of "trend", "common" or a vector of non-negative real numbers with length equal to \code{nrow(counts)}. Specifying \code{NBdisp="trend"} or \code{NBdisp="common"} will use {\link{estimateGLMTrendedDisp}} or \code{\link{estimateGLMCommonDisp}}, respectively, from the package \code{edgeR} to estimate negative binomial dispersion parameters for each gene.  Estimates obtained from other sources can be used by entering \code{NBdisp} as a vector containing the negative binomial dispersion value to use for each gene when fitting quasi-likelihood model.}
+    \item{NBdisp}{Used only when \code{Model="NegBin"}. Must be one of "trend", "common" or a vector of non-negative real numbers with length equal to \code{nrow(counts)}. Specifying \code{NBdisp="trend"} or \code{NBdisp="common"} will use {\link[edgeR]{estimateGLMTrendedDisp}} or \code{\link[edgeR]{estimateGLMCommonDisp}}, respectively, from the package \code{edgeR} to estimate negative binomial dispersion parameters for each gene.  Estimates obtained from other sources can be used by entering \code{NBdisp} as a vector containing the negative binomial dispersion value to use for each gene when fitting quasi-likelihood model.}
 	
 	\item{bias.fold.tolerance}{A numerical value no smaller than 1. If the bias reduction of maximum likelihood estimates of (log) fold change is likely to result in a ratio of fold changes greater than this value, then bias reduction will be performed on such genes. Setting \code{bias.fold.tolerance=Inf} will completely disable bias reduction;  setting \code{bias.fold.tolerance=1} will always perform bias reduction.  See \code{\link{NBDev}} for details. Currently, this option is ignored unless \code{Model="NegBin"}.} 
 	
-	\item{...}{arguments to be passed to the function \code{\link{estimateGLMTrendedDisp}} or \code{\link{estimateGLMCommonDisp}} from the package \code{edgeR}.}
+	\item{...}{arguments to be passed to the function \code{\link[edgeR]{estimateGLMTrendedDisp}} or \code{\link[edgeR]{estimateGLMCommonDisp}} from the package \code{edgeR}.}
 	}
 
 \value{list containing:
